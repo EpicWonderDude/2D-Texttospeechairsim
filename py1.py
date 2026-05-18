@@ -26,11 +26,11 @@ while running:#
         direction = "left"
     if keys[pygame.K_RIGHT]:
         direction = "right"
-    if direction == "up":
+    if direction == "up" and player_pos.y > 350:
         player_pos.y -= 5
-    if direction == "down":
+    if direction == "down" and player_pos.y < 390:
         player_pos.y += 5
-    if direction == "left":
+    if direction == "left" and player_pos.x > 30:
         player_pos.x -= 5
-    if direction == "right":
+    if direction == "right" and player_pos.x < 1250:
         player_pos.x += 5
