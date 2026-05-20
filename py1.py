@@ -3,7 +3,7 @@ pygame.init()
 screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 running = True
-player_pos = pygame.Vector2(1200, 370)
+player_pos = pygame.Vector2(1100, 320)
 direction = "left"
 score = 0
 print("Score:", score)
@@ -24,8 +24,15 @@ while running:
     pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(300, 80, 20, 100))
     pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(500, 220, 100, 20))
     pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(750, 80, 20, 100))
-    pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(1050, 80, 20, 100))
-    pygame.draw.circle(screen, (0, 0, 255), player_pos, 20)
+    pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(1050, 80, 20, 100)) 
+    triangle_points = [
+        (player_pos.x, player_pos.y - 20),   # Top point
+        (player_pos.x - 20, player_pos.y + 20),  # Bottom-left
+        (player_pos.x + 20, player_pos.y + 20)   # Bottom-right
+    ]
+
+    pygame.draw.polygon(screen, (255, 255, 255), triangle_points)    
+
     pygame.display.flip()
     clock.tick(60)
     keys = pygame.key.get_pressed()
