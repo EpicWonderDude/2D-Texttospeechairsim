@@ -1,3 +1,6 @@
+// Run this:
+// python -m pip install sounddevice soundfile speechrecognition numpy
+
 import sounddevice as sd
 import numpy as np
 import wave
