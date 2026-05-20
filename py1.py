@@ -5,6 +5,8 @@ clock = pygame.time.Clock()
 running = True
 player_pos = pygame.Vector2(1200, 370)
 direction = "left"
+score = 0
+print("Score:", score)
 while running:
 
     for event in pygame.event.get():
@@ -77,3 +79,27 @@ while running:
     if direction == "right" and player_pos.x == 580 and (player_pos.y  < 340 and player_pos.y > 160):
         player_pos.x -= 5
     
+    if player_pos.x == 1000 and player_pos.y == 320:
+        score += 1
+        print("Score:", score)
+    if player_pos.x == 750 and player_pos.y == 320:
+        score += 1
+        print("Score:", score)
+    if player_pos.x == 500 and player_pos.y == 220:
+        score += 1
+        print("Score:", score)
+    if player_pos.x == 750 and player_pos.y == 80:
+        score += 1
+        print("Score:", score)
+    if player_pos.x == 1050 and player_pos.y == 80:
+        score += 1
+        print("Score:", score)
+    if player_pos.x == 200 and player_pos.y == 320:
+        score -= 1
+        print("Score:", score)
+    if player_pos.x == 500 and player_pos.y == 620:
+        score -= 1
+        print("Score:", score)
+    if player_pos.x == 300 and player_pos.y == 80:
+        score -= 1
+        print("Score:", score)
