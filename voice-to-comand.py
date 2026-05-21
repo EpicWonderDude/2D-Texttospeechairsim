@@ -1,5 +1,3 @@
-
-
 import sounddevice as sd
 import numpy as np
 import wave
@@ -43,17 +41,3 @@ try:
 except Exception as e:
     print("Sorry, I did not get that")
     print(e)
-
-string = "Turn right 40 degrees"
-
-
-def stringparse(string):
-    splitspring = string.split()
-
-    degrees = splitspring[1]
-    direction = splitspring[2]
-
-    print("The direction is", np.degrees, "the degrees are:", direction)
-
-stringparse("error up 70 sthis")
-stringparse("error down 60 sthis")   
