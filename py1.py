@@ -34,7 +34,7 @@ while running:
         player_pos.x -= 5
     if direction == "left" and player_pos.x == 520 and (player_pos.y  > 420 and player_pos.y < 690):
         player_pos.x += 5
-    if direction == "left" and player_pos.x == 520 and (player_pos.y  < 320 and player_pos.y > 200):
+    if direction == "left" and player_pos.x == 520 and (player_pos.y  < 320 and player_pos.y > f00):
         player_pos.x += 5
         
 
