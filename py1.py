@@ -42,10 +42,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-        # Keyboard press
         if event.type == pygame.KEYDOWN:
 
-            # Push-to-talk with SPACE
             if event.key == pygame.K_SPACE:
 
                 r = sr.Recognizer()
@@ -54,7 +52,7 @@ while running:
                     with sr.Microphone() as source:
 
                         print("Speak now...")
-                        audio = r.listen(source, phrase_time_limit=3)
+                        audio = r.listen(source)
 
                     text = r.recognize_google(audio)
 
@@ -161,9 +159,6 @@ while running:
     ):
         player_pos.x -= 5
 
-    # -----------------------------
-    # Scoring
-    # -----------------------------
     if abs(player_pos.x - 1000) < 5:
         score += 1
         print("Score:", score)
