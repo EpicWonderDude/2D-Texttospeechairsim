@@ -1,7 +1,7 @@
 string = "Turn right 40 degrees"
 
 
-def stringparse(string):
+def stringparse(string): nb  b
     splitspring = string.split()
 
     degrees = splitspring[1]
@@ -10,4 +10,4 @@ def stringparse(string):
     print("The direction is", degrees, "the degrees are:", direction)
 
 stringparse("error up 70 sthis")
-stringparse("error down 60 sthis")
+stringparse("error down 60 sthis")   
